@@ -1,0 +1,136 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('images/A_minimalistic_and_vibrant_candy-themed_background.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Barra de navegación */
+nav {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    padding: 10px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: background-color 0.5s;
+}
+
+nav.scrolled {
+    background-color: #333;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px;
+    transition: transform 0.3s;
+}
+
+nav ul li a:hover {
+    transform: scale(1.1);
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+/* Lista desplegable de Productos */
+nav ul ul {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 40px;
+    list-style: none;
+}
+
+nav ul ul li {
+    padding: 10px;
+}
+
+nav ul ul li a {
+    font-size: 1em;
+    color: white;
+}
+
+/* Estilos de las secciones */
+section {
+    padding: 60px;
+    margin-top: 80px;
+}
+
+#bienvenida {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#quienes-somos {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+#contacto {
+    background-color: rgba(240, 240, 240, 0.9);
+}
+
+/* Mapa */
+iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+/* Formulario de contacto */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+form input[type="submit"] {
+    background-color: #FF69B4;
+    color: white;
+    cursor: pointer;
+    border: none;
+}

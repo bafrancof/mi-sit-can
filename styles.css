@@ -12,7 +12,7 @@ h1, h2 {
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 5em;
     animation: fadeIn 2s ease-in-out;
 }
 
@@ -36,7 +36,7 @@ nav {
 }
 
 nav.scrolled {
-    background-color: #333;
+    background-color: #527c8c;
 }
 
 nav ul {
@@ -97,6 +97,7 @@ section {
     justify-content: center;
     align-items: center;
     color: white;
+   
 }
 
 #quienes-somos {

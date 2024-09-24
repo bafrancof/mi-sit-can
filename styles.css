@@ -54,9 +54,56 @@ nav {
     padding: 10px;
     z-index: 1000;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     transition: background-color 0.5s;
+}
+
+#menu-toggle {
+    display: none; /* Oculto por defecto */
+    background: none;
+    color: white;
+    border: none;
+    font-size: 24px; /* Tamaño del icono de hamburguesa */
+    cursor: pointer;
+}
+
+/* Lista de navegación */
+#nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block; /* Muestra el botón en pantallas pequeñas */
+    }
+
+    #nav-list {
+        display: none; /* Oculta la lista de navegación */
+        flex-direction: column; /* Cambia a columna */
+        width: 100%; /* Ancho completo */
+        background-color: rgba(0, 0, 0, 0.8); /* Fondo del menú */
+        position: absolute; /* Posición absoluta para desplegar */
+        top: 60px; /* Desplazamiento hacia abajo */
+        left: 0;
+    }
+
+    #nav-list.show {
+        display: flex; /* Muestra la lista cuando se activa */
+    }
+    nav ul li {
+        margin: 10px 0; /* Espaciado entre elementos */
+        text-align: center; /* Centrando texto */
+    }
+}
+
+nav img {
+    height: 50px; /* Fijo el tamaño del logo */
 }
 
 nav.scrolled {

@@ -5,6 +5,7 @@ body {
     background: url('images/A_minimalistic_and_vibrant_candy-themed_background.png') no-repeat center center fixed;
     background-size: cover;
     color: #333;
+    padding: 0; 
 }
 
 h1, h2 {
@@ -19,6 +20,29 @@ h1 {
 @keyframes fadeIn {
     0% { opacity: 0; transform: scale(0.8); }
     100% { opacity: 1; transform: scale(1); }
+}
+/* Responsividad */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+    }
+
+    nav ul {
+        flex-direction: column; /* Cambia la dirección de la lista de navegación a columna en móviles */
+        align-items: center; /* Centra los elementos */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Espaciado entre elementos */
+    }
+
+    section {
+        padding: 30px; /* Menos padding en móviles */
+    }
+
+    iframe {
+        height: 200px; /* Reduce la altura del mapa en móviles */
+    }
 }
 
 /* Barra de navegación */
